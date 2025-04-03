@@ -1,4 +1,5 @@
--The main Idea:
+**The main Idea:**
+--
 "Ask A Muslim" is an innovative digital platform designed to guide and support
 individuals exploring or newly embracing Islam. Our application, supported by a
 powerful backend, serves as a comprehensive gateway for those eager to learn
