@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mornings_Azkar"
+    android:orientation="vertical"
+    android:padding="40dp"
+    android:background="#5D4444"
+    android:gravity="center"
+
+    >
+
+    
+    
+
+    
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/morning_azkar_tx"
+
+           android:gravity="center"
+android:layout_gravity="center_vertical"
+
+android:layout_marginBottom="30dp"
+            />
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:text="@string/next_one"
+    android:textSize="20sp"
+    android:textStyle="bold"
+android:id="@+id/nextOneBtn"
+    android:layout_gravity="center_vertical"
+    />
+    
+    
+    
+
+    
+    
+    
+    
+</LinearLayout>
+
+
+    

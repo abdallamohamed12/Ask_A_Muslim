@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Ask A Muslim</string>
+    <string name="prayers_time_icon">Prayers\' time icon</string>
+    <string name="islamic_remembrance">Islamic remembrance</string>
+    <string name="e_learning_icon">E-learning icon</string>
+    <string name="home">Home</string>
+    <string name="prayers_time">Prayers\' Time</string>
+    <string name="home_icon">Home icon</string>
+    <string name="remembrance">remembrance</string>
+    <string name="courses">Courses</string>
+    <string name="password_hint">Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="e_mail_hint">E-mail </string>
+
+    <string name="create_an_account_to_save_your_progress">Create an account to save your progress</string>
+    <string name="welcome_back">Welcome Back</string>
+
+    <string name="sign_in">Sign in</string>
+    <string name="i_don_t_have_an_account">I Don\'t have an account</string>
+    <string name="i_have_account_already">I have account already</string>
+    <string name="e_mail_or_username">E-mail Or Username</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="back_arrow_icon">back arrow icon</string>
+    <string name="salah">Salah</string>
+    <string name="morning">Morning</string>
+    <string name="sleep">Sleep</string>
+    <string name="night">night</string>
+    <string name="azkar_list">Azkar List</string>
+    <string name="ramadan_fasting">Ramadan - Fasting</string>
+    <string name="morning_icon">Morning Icon</string>
+    <string name="sleep_icon">sleep icon</string>
+    <string name="night_icon">Night icon</string>
+    <string name="food_icon">Food Icon</string>
+    <string name="next_one">Next One</string>
+    <string name="ask_a_muslim_icon">Ask a muslim icon</string>
+
+
+    <string-array name="morning_azkar">
+    <item>
+        \"الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ\"
+        \n\nPraise be to Allah who gives us life after He has caused us to die and to Him is the resurrection.
+    </item>
+
+        <item>
+        \"اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ\"
+        \n\nAllah - there is no deity except Him, the Ever-Living, the Sustainer of existence. Neither drowsiness overtakes Him nor sleep.
+    </item>
+
+        <item>
+        \"سُبْحَانَ اللَّهِ وَبِحَمْدِهِ: عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ\"
+        \n\nGlory is to Allah and praise is to Him, by the multitude of His creation, by His Pleasure, by the weight of His Throne, and by the extent of His Words.
+    </item>
+
+        <item>
+        \"بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الأَرْضِ وَلاَ فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ\"
+        \n\nIn the name of Allah with Whose Name nothing is harmed on earth nor in the heavens, and He is the All-Hearing, All-Knowing.
+    </item>
+    </string-array>
+
+</resources>
+
