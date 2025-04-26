@@ -16,7 +16,7 @@ This app aims to bridge the gap between curiosity and understanding by offering:
 
 ## 🎯 Key Features
 
-- 🧎 **Prayer and Wudu (Ablution) Tutorials**
+- 🧎 **Islamic Tutorials**
 - 📖 **Simplified Explanations** of Islamic beliefs and practices
 - 🤖 **Backend Support** for dynamic content and user interaction
 - 🌍 **Multilingual and Inclusive Design** to reach global audiences
