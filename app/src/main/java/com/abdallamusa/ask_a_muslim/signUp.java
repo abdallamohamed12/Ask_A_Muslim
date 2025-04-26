@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class signUp extends AppCompatActivity {
 
-    Button haveAccount_btn ;
+    TextView signIn_tx;
      ImageView backArrowBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +21,19 @@ public class signUp extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
 
-        haveAccount_btn = findViewById(R.id.iHaveAccount_btn);
+        backArrowBtn = findViewById(R.id.arrow_left);
 
-        backArrowBtn = findViewById(R.id.back_arrow_icon);
-        haveAccount_btn.setOnClickListener(view -> {
+        signIn_tx = findViewById(R.id.signIn_tx);
 
-            Intent goToLoginActivity = new Intent(signUp.this , login.class);
+        Button createAccountButton = findViewById(R.id.Create_account_button);
+
+
+        signIn_tx.setOnClickListener(view -> {
+
+            Intent goToLoginActivity = new Intent(signUp.this, login.class);
 
             startActivity(goToLoginActivity);
+
 
         });
 
@@ -38,6 +44,13 @@ public class signUp extends AppCompatActivity {
             startActivity(goToMainActivity);
 
 
+        });
+
+        createAccountButton.setOnClickListener(view -> {
+
+
+            Intent goToCoursesActivity = new Intent(signUp.this , Courses.class);
+            startActivity(goToCoursesActivity);
         });
 
     }

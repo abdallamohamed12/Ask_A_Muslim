@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/azkar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Azkar"
+    android:fitsSystemWindows="true"
+    >
+
+    <!-- Top Bar -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/arrow_left_icon"
+        android:src="@drawable/arrow_left"
+
+        android:layout_alignParentStart="true"
+        android:layout_margin="30dp"
+
+        android:id="@+id/backArrow_Quran"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:text="Quran / قرأن"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:id="@+id/Azkar_text"
+        android:layout_alignParentEnd="true"
+
+        />
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+
+        android:layout_marginTop="30dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/quran_text"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:padding="20dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/next_button_quranLayout"
+        android:textStyle="bold"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:textAllCaps="false"
+
+        android:textColor="@color/white"
+        android:background="@drawable/semi_round_green_button"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prevoius"
+        android:id="@+id/prevoius_button_quranLayout"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:background="@drawable/semi_round_grey_button"
+        />
+</RelativeLayout>

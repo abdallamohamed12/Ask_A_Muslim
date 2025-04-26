@@ -14,12 +14,44 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/back_arrow_icon"
-        android:contentDescription="@string/back_arrow_icon"
-        android:src="@drawable/arrow_back_icon"
+        android:contentDescription="@string/arrow_left_icon"
+        android:src="@drawable/arrow_left"
         android:layout_marginTop="16dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="16dp"
+
+        />
+    <TextView
+android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back_arrow_icon"
+ android:text="@string/sign_in_with_e_mail_or_username"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/sign_ip_textView"
+        android:layout_marginBottom="10dp"
+
+
+        />
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="@string/input_your_ask_a_muslim_account"
+        android:textColor="@color/black"
+
+        android:textSize="15sp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/signIp_tx"
+        android:layout_marginBottom="30dp"
+        android:layout_below="@id/sign_ip_textView"
+
         />
 
     <TextView
@@ -80,27 +112,20 @@
         android:id="@+id/Password_edit_view"
         />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
 
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-
+      android:background="@drawable/rounded_button_background"
+        android:textColor="@android:color/white"
         android:text="@string/sign_in"
-        android:id="@+id/Create_account_button"
+        android:id="@+id/signInBtn"
         android:layout_below="@id/Password_edit_view"
         android:layout_margin="20dp"
         android:textStyle="bold"
         android:layout_centerInParent="true"
-        />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:text="@string/i_don_t_have_an_account"
-
-        android:layout_alignParentBottom="true"
-        android:id="@+id/idontHaveAccount_btn"
 
         />
+
+
 </RelativeLayout>

@@ -7,8 +7,6 @@ import android.content.Intent;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.text.Editable;
-import android.view.autofill.AutofillManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -20,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class login extends AppCompatActivity {
 
-    Button registration_btn;
+    Button signInBtn;
     EditText emailOrUsername_editText;
 
     ImageView backArrowBtn;
@@ -32,24 +30,22 @@ public class login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
-        registration_btn = findViewById(R.id.idontHaveAccount_btn);
 
         emailOrUsername_editText = findViewById(R.id.Email_or_Username_edit_view);
 
 
         backArrowBtn = findViewById(R.id.back_arrow_icon);
 
+        signInBtn = findViewById(R.id.signInBtn);
 
         emailOrUsername_editText.setAutofillHints( AUTOFILL_HINT_EMAIL_ADDRESS,AUTOFILL_HINT_USERNAME);
 
-        registration_btn.setOnClickListener(view -> {
+signInBtn.setOnClickListener(view -> {
 
+    Intent goToCoursesActivity = new Intent(login.this , Courses.class);
+    startActivity(goToCoursesActivity);
 
-            Intent goToSignUpActivity = new Intent(login.this , signUp.class);
-            startActivity(goToSignUpActivity);
-
-
-        });
+});
 
 
         backArrowBtn.setOnClickListener(view -> {
@@ -60,6 +56,8 @@ public class login extends AppCompatActivity {
 
 
         });
+
+
 
     }
 }

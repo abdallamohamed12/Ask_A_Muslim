@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 1) transparent fill so your tabs sit on white -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent"/>
+        </shape>
+    </item>
+
+    <!-- 2) 1dp green line at the very top -->
+    <item android:gravity="top">
+        <shape android:shape="rectangle">
+            <size android:height="1dp"/>
+            <solid android:color="@color/dot_gray"/>
+        </shape>
+    </item>
+
+    <!-- 3) 1dp green line at the very bottom -->
+    <item android:gravity="bottom">
+        <shape android:shape="rectangle">
+            <size android:height="1dp"/>
+            <solid android:color="@color/dot_gray"/>
+        </shape>
+    </item>
+
+</layer-list>

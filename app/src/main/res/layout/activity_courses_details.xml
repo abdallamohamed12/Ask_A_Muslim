@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CoursesDetails"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    >
+
+
+
+    <!-- 1. Header Image -->
+    <ImageView
+        android:id="@+id/headerImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mosque_course_details"
+        android:contentDescription="@string/islamic_pictures"/>
+
+    <!-- 2. Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerImage"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 2.1 Category Label -->
+            <TextView
+                android:id="@+id/categoryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/semi_white_green_shape"
+                android:text="Quran"
+                android:textColor="#0F5F2C"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                 />
+
+            <!-- 2.2 Title -->
+            <TextView
+                android:id="@+id/courseTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/fiqh_of_ramadan"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- 2.3 Instructor Info -->
+
+
+
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/instructorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Ask A Muslim Academy"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    app:drawableStartCompat="@drawable/ask_a_muslim_icon" />
+
+
+
+            <GridLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="1"
+                android:useDefaultMargins="true"
+                android:alignmentMode="alignMargins"
+                android:layout_marginBottom="16dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:background="@drawable/cards_outline_grey"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+
+                android:layout_margin="8dp">
+
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/course_level_icon"
+
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Level"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/black"
+
+
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Beginner"
+                    android:id="@+id/courseLevel_ID"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+
+                    />
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/cards_outline_grey"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+
+                    android:layout_margin="8dp">
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       android:src="@drawable/student_icon"
+                        android:layout_gravity="center_horizontal" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Students"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black"
+
+
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:id="@+id/numOfStudents_ID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="120"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        />
+                </LinearLayout>
+
+
+
+</GridLayout>
+            <!-- 2.5 Progress Bar -->
+<TextView
+    android:layout_marginTop="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="30%"
+    android:id="@+id/numberOfProgressBarID"
+    android:textStyle="bold"
+    android:textSize="15sp"
+    android:textColor="@color/black"
+    android:layout_gravity="end"
+    />
+            <ProgressBar
+
+                style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+                android:id="@+id/courseProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="5dp"
+                android:progress="30"
+                android:progressTint="#00897B" />
+
+            <!-- 2.6 Continue Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnContinueLearning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/semi_round_green_button"
+                android:text="Continue Learning"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+android:textSize="15sp"
+                />
+
+
+            <!-- 2.4 Stats Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:background="@drawable/tab_container_divider"
+                >
+
+                <!-- Duration -->
+
+                <TextView
+                    android:id="@+id/tabOverview"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Overview"
+                    android:textColor="@color/black"
+android:background="@drawable/tab_background"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16sp" />
+
+
+                <!-- Level -->
+                <TextView
+                    android:id="@+id/tabSyllabus"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Syllabus"
+                    android:textColor="@color/black"
+android:background="@drawable/tab_background"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/content_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:padding="16dp"/>
+
+        </LinearLayout>
+
+
+
+
+          </ScrollView>
+
+
+
+</RelativeLayout>

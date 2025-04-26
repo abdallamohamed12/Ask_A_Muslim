@@ -1,12 +1,11 @@
 package com.abdallamusa.ask_a_muslim;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class PrayersTime extends AppCompatActivity {
 
@@ -15,6 +14,16 @@ public class PrayersTime extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_prayers_time);
+
+        ImageView arrowBack = findViewById(R.id.backArrow_prayerTimes);
+
+        arrowBack.setOnClickListener(view -> {
+
+            Intent goToHomeActivity = new Intent(this , MainActivity.class);
+            startActivity(goToHomeActivity);
+
+        });
+
 
     }
 }

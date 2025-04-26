@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+
+    android:fitsSystemWindows="true"
+    >
+
+    <ImageView
+        android:id="@+id/backArrowIcon_CourseVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/arrow_left"
+        android:layout_marginStart="20dp"
+
+        android:contentDescription="@string/arrow_left_icon"
+        />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        >
+
+    <!-- 1) WebView to host a YouTube embed, takes half the screen via layout_weight -->
+    <WebView
+        android:id="@+id/youtubeWebView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:overScrollMode="never"
+        android:layout_margin="20dp"
+
+        android:layout_centerInParent="true"
+
+
+        />
+
+    <!-- 2) CheckBox for “I’ve finished the video” -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:id="@+id/finishedVideoBtn_ID"
+        android:text="Finished Video"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/youtubeWebView"
+        android:background="@drawable/semi_round_green_button"
+
+        android:layout_centerHorizontal="true"
+
+
+
+        />
+    </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

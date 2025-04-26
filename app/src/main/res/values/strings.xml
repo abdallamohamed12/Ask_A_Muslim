@@ -6,56 +6,380 @@
     <string name="home">Home</string>
     <string name="prayers_time">Prayers\' Time</string>
     <string name="home_icon">Home icon</string>
-    <string name="remembrance">remembrance</string>
+    <string name="remembrance">Azkar</string>
     <string name="courses">Courses</string>
     <string name="password_hint">Password</string>
-    <string name="create_account">Create Account</string>
+    <string name="create_account">Sign up Now</string>
     <string name="e_mail_hint">E-mail </string>
 
-    <string name="create_an_account_to_save_your_progress">Create an account to save your progress</string>
     <string name="welcome_back">Welcome Back</string>
 
     <string name="sign_in">Sign in</string>
-    <string name="i_don_t_have_an_account">I Don\'t have an account</string>
+
     <string name="i_have_account_already">I have account already</string>
     <string name="e_mail_or_username">E-mail Or Username</string>
-    <string name="enter_username">Enter Username</string>
-    <string name="back_arrow_icon">back arrow icon</string>
+    <string name="enter_username">Username</string>
+
     <string name="salah">Salah</string>
     <string name="morning">Morning</string>
     <string name="sleep">Sleep</string>
     <string name="night">night</string>
-    <string name="azkar_list">Azkar List</string>
+    <string name="azkar_list">Azkar </string>
     <string name="ramadan_fasting">Ramadan - Fasting</string>
     <string name="morning_icon">Morning Icon</string>
     <string name="sleep_icon">sleep icon</string>
     <string name="night_icon">Night icon</string>
     <string name="food_icon">Food Icon</string>
-    <string name="next_one">Next One</string>
+    <string name="next_one">Next </string>
     <string name="ask_a_muslim_icon">Ask a muslim icon</string>
+    <string name="previous">Previous</string>
+    <string name="mecca_and_pilgrimage_to_it_in_the_bible_pilgrimage_to_mecca_in_the_bible_bible_mecca_askamuslim">Mecca and Pilgrimage To It in The Bible |Pilgrimage to Mecca in the Bible |Bible |Mecca |AskAMuslim</string>
+    <string name="qibla_direction">Qibla Direction</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+
+    <string name="get_started">Get Started</string>
+
+    <string name="title1"> Welcome to Ask A Muslim!</string>
+
+    <string name="title2">  Learn from available Islamic courses.</string>
+
+    <string name="title3"> Everything you need in one place!</string>
 
 
-    <string-array name="morning_azkar">
-    <item>
-        \"الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ\"
-        \n\nPraise be to Allah who gives us life after He has caused us to die and to Him is the resurrection.
+    <string name="welcome_phrase1"> Discover Islam from authentic sources and learn about your faith effortlessly.</string>
+    <string name="welcome_phrase2">Find the nearest mosque &amp; Always know the Qiblah direction. </string>
+
+    <string name="welcome_phrase3"> Are you ready?</string>
+    <string name="dot_icon">dot Icon</string>
+    <string name="islamic_pictures">Islamic Pictures</string>
+    <string name="sign_up_with_email">Sign up with Email</string>
+    <string name="input_your_ask_a_muslim_account">Input your Ask A Muslim account!</string>
+    <string name="by_creating_your_account_you_have_to_agree_with_our_terms_and_condition">By Creating your account you have to agree with our Terms and Condition</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_in_here">Sign in here</string>
+    <string name="arrow_left_icon">arrow_left icon</string>
+    <string name="sign_in_with_e_mail_or_username">Sign In With E-mail Or Username</string>
+    <string name="profile_icon">profile Icon</string>
+    <string name="quran_icon">quran icon</string>
+    <string name="azkar">Azkar</string>
+    <string name="prayer">Prayer</string>
+    <string name="more">more</string>
+    <string name="features">Features</string>
+    <string name="coming_soon">Coming Soon...</string>
+    <string name="quran">Quran</string>
+    <string name="read_the_holy_quran">Read the Holy Quran</string>
+    <string name="compass_icon">Compass icon</string>
+    <string name="track_daily_prayers">Track Daily Prayers</string>
+    <string name="prayer_icon">prayer icon</string>
+    <string name="qiblah">Qiblah</string>
+    <string name="learn_about_islam">Learn About Islam!</string>
+    <string name="book_icon">book icon</string>
+    <string name="big_mosque_icon">big mosque icon</string>
+    <string name="nearby_mosques">Nearby Mosques</string>
+    <string name="a_string_of_beads_icon">a string of beads icon</string>
+    <string name="daily_remember">Daily Remember</string>
+    <string name="profile">Profile</string>
+    <string name="qiblah_direction">Qiblah Direction</string>
+    <string name="morning_azkar">Morning Azkar</string>
+    <string name="right_arrow_icon">right arrow icon</string>
+    <string name="faith">Faith</string>
+    <string name="Continue">Continue</string>
+    <string name="my_learning">My Learning</string>
+    <string name="fiqh_of_ramadan">Fiqh Of Ramadan</string>
+    <string name="start">Start</string>
+    <string name="enroll_now">Enroll now</string>
+
+    <string-array name="short_surahs">
+        <!-- 1. Surah Al-Fatihah -->
+        <item>
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ\n
+        الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ\n
+        الرَّحْمَٰنِ الرَّحِيمِ\n
+        مَالِكِ يَوْمِ الدِّينِ\n
+        إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ\n
+        اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ\n
+        صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ\n
+        End of Surah Al-Fatihah\n
+        Translation: In the name of Allah, the Entirely Merciful, the Especially Merciful. All praise is to Allah, Lord of the worlds. The Entirely Merciful, the Especially Merciful, Sovereign of the Day of Recompense. It is You we worship and You we ask for help. Guide us to the straight path - the path of those upon whom You have bestowed favor, not of those who have earned [Your] anger or of those who are astray.\n
+        Transliteration: Bismillahir-Rahmanir-Raheem. Alhamdu lillahi rabbil ‘alameen. Ar-Rahmanir-Raheem. Maliki yawmid-Deen. Iyyaka na’budu wa iyyaka nasta’een. Ihdinas-siratal mustaqeem. Siratal latheena an’amta ‘alayhim ghayril maghdoobi ‘alayhim wa lad-dalleen.\n
+        Reference: Quran 1:1-7
     </item>
 
+        <!-- 2. Surah Al-Ikhlas -->
         <item>
-        \"اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ\"
-        \n\nAllah - there is no deity except Him, the Ever-Living, the Sustainer of existence. Neither drowsiness overtakes Him nor sleep.
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ\n
+        قُلْ هُوَ اللَّهُ أَحَدٌ\n
+        اللَّهُ الصَّمَدُ\n
+        لَمْ يَلِدْ وَلَمْ يُولَدْ\n
+        وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ\n
+        End of Surah Al-Ikhlas\n
+        Translation: In the name of Allah, the Entirely Merciful, the Especially Merciful. Say, “He is Allah, [who is] One. Allah, the Eternal Refuge. He neither begets nor is born. Nor is there to Him any equivalent.”\n
+        Transliteration: Bismillahir-Rahmanir-Raheem. Qul huwa Allahu ahad. Allahus-Samad. Lam yalid wa lam yoolad. Wa lam yakun lahu kufuwan ahad.\n
+        Reference: Quran 112:1-4
     </item>
 
+        <!-- 3. Surah Al-Falaq -->
         <item>
-        \"سُبْحَانَ اللَّهِ وَبِحَمْدِهِ: عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ\"
-        \n\nGlory is to Allah and praise is to Him, by the multitude of His creation, by His Pleasure, by the weight of His Throne, and by the extent of His Words.
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ\n
+        قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ\n
+        مِنْ شَرِّ مَا خَلَقَ\n
+        وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ\n
+        وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ\n
+        وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ\n
+        End of Surah Al-Falaq\n
+        Translation: In the name of Allah, the Entirely Merciful, the Especially Merciful. Say, “I seek refuge in the Lord of daybreak. From the evil of that which He created. And from the evil of darkness when it settles. And from the evil of the blowers in knots. And from the evil of an envier when he envies.”\n
+        Transliteration: Bismillahir-Rahmanir-Raheem. Qul a’udhu bi rabbil-falaq. Min sharri ma khalaq. Wa min sharri ghasiqin idha waqab. Wa min sharrin-naffathati fil-‘uqad. Wa min sharri hasidin idha hasad.\n
+        Reference: Quran 113:1-5
     </item>
 
+        <!-- 4. Surah An-Nas -->
         <item>
-        \"بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الأَرْضِ وَلاَ فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ\"
-        \n\nIn the name of Allah with Whose Name nothing is harmed on earth nor in the heavens, and He is the All-Hearing, All-Knowing.
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ\n
+        قُلْ أَعُوذُ بِرَبِّ النَّاسِ\n
+        مَلِكِ النَّاسِ\n
+        إِلَٰهِ النَّاسِ\n
+        مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ\n
+        الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ\n
+        مِنَ الْجِنَّةِ وَالنَّاسِ\n
+        End of Surah An-Nas\n
+        Translation: In the name of Allah, the Entirely Merciful, the Especially Merciful. Say, “I seek refuge in the Lord of mankind. The Sovereign of mankind. The God of mankind. From the evil of the retreating whisperer. Who whispers [evil] into the breasts of mankind. From among the jinn and mankind.”\n
+        Transliteration: Bismillahir-Rahmanir-Raheem. Qul a’udhu bi rabbin-nas. Malikin-nas. Ilahin-nas. Min sharril-waswasil-khannas. Alladhi yuwaswisu fee sudoorin-nas. Minal-jinnati wan-nas.\n
+        Reference: Quran 114:1-6
+    </item>
+
+        <!-- 5. Surah Al-Kafirun -->
+        <item>
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ\n
+        قُلْ يَا أَيُّهَا الْكَافِرُونَ\n
+        لَا أَعْبُدُ مَا تَعْبُدُونَ\n
+        وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ\n
+        وَلَا أَنَا عَابِدٌ مَا عَبَدتُّمْ\n
+        وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ\n
+        لَكُمْ دِينُكُمْ وَلِيَ دِينِ\n
+        End of Surah Al-Kafirun\n
+        Translation: In the name of Allah, the Entirely Merciful, the Especially Merciful. Say, “O disbelievers! I do not worship what you worship. Nor are you worshippers of what I worship. Nor will I be a worshipper of what you worship. Nor will you be worshippers of what I worship. For you is your religion, and for me is my religion.”\n
+        Transliteration: Bismillahir-Rahmanir-Raheem. Qul ya ayyuhal-kafiroon. La a’budu ma ta’budoon. Wa la antum ‘abidoona ma a’bud. Wa la ana ‘abidum ma ‘abadtum. Wa la antum ‘abidoona ma a’bud. Lakum deenukum wa liya deen.\n
+        Reference: Quran 109:1-6
+    </item>
+
+        <!-- 6. Surah Al-Masad -->
+        <item>
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ\n
+        تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ\n
+        مَا أَغْنَىٰ عَنْهُ مَالُهُ وَمَا كَسَبَ\n
+        سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ\n
+        وَامْرَأَتُهُ حَمَّالَةَ الْحَطَبِ\n
+        فِي جِيدِهَا حَبْلٌ مِّن مَّسَدٍ\n
+        End of Surah Al-Masad\n
+        Translation: In the name of Allah, the Entirely Merciful, the Especially Merciful. May the hands of Abu Lahab be ruined, and ruined is he. His wealth will not avail him or that which he gained. He will [enter to] burn in a Fire of [blazing] flame. And his wife [as well] - the carrier of firewood. Around her neck is a rope of [twisted] fiber.\n
+        Transliteration: Bismillahir-Rahmanir-Raheem. Tabbat yada abee Lahabin wa tabb. Ma aghna ‘anhu maluhu wa ma kasab. Sayaṣla naran thata lahab. Wamra’atuhu hammalatal-hatab. Fee jeediha hablum mim masad.\n
+        Reference: Quran 111:1-5
+    </item>
+
+        <!-- 7. Surah Al-Asr -->
+        <item>
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ\n
+        وَالْعَصْرِ\n
+        إِنَّ الْإِنْسَانَ لَفِي خُسْرٍ\n
+        إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ\n
+        End of Surah Al-Asr\n
+        Translation: In the name of Allah, the Entirely Merciful, the Especially Merciful. By time, indeed, mankind is in loss. Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience.\n
+        Transliteration: Bismillahir-Rahmanir-Raheem. Wal-‘asr. Innal-insana lafee khusr. Illal-latheena amanoo wa ‘amilus-salihati wa tawasaw bil-haqqi wa tawasaw bis-sabr.\n
+        Reference: Quran 103:1-3
     </item>
     </string-array>
 
+    <string-array name="night_azkar">
+        <!-- 1 -->
+        <item>أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ\nAmsayna wa amsal-mulku lillah, wal-hamdulillah, la ilaha illallah wahdahu la sharika lah\nWe have entered the evening and the dominion belongs to Allah. Praise be to Allah. There is none worthy of worship except Allah alone, without partner.\nReference: Sunan Abu Dawood 5076</item>
+
+        <!-- 2 -->
+        <item>اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ\nAllahumma bika amsayna, wa bika nahya, wa bika namutu, wa ilaykan-nushur\nO Allah, by You we enter the evening, by You we live, by You we die, and to You is the resurrection.\nReference: Jami` at-Tirmidhi 3391</item>
+
+        <!-- 3 -->
+        <item>سُبْحَانَ اللَّهِ وَبِحَمْدِهِ: عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ\nSubhanallahi wa bihamdihi: Adada khalqihi, wa ridha nafsihi, wa zinata arshihi, wa midada kalimatihi\nGlory is to Allah and praise is to Him, by the multitude of His creation, by His Pleasure, by the weight of His Throne, and by the extent of His Words.\nReference: Sahih Muslim 2726</item>
+
+        <!-- 4 -->
+        <item>اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا\nAllahumma inni as’aluka ‘ilman nafi’an, wa rizqan tayyiban, wa ‘amalan mutaqabbalan\nO Allah, I ask You for beneficial knowledge, wholesome provision, and accepted deeds.\nReference: Sunan Ibn Majah 925</item>
+
+        <!-- 5 -->
+        <item>حَسْبِيَ اللَّهُ لَا إِلَهَ إِلَّا هُوَ، عَلَيْهِ تَوَكَّلْتُ، وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ\nHasbiyallahu la ilaha illa Huwa, ‘alayhi tawakkaltu, wa Huwa Rabbul-‘Arshil-‘Azim\nSufficient for me is Allah; there is no deity except Him. On Him I have relied, and He is the Lord of the Great Throne.\nReference: Quran 9:129</item>
+
+        <!-- 6 -->
+        <item>أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ\nA’udhu bi kalimatillahit-tammati min sharri ma khalaq\nI seek refuge in the perfect words of Allah from the evil of what He has created.\nReference: Sahih Muslim 2708</item>
+
+        <!-- 7 -->
+        <item>اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَأَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ، وَأَعُوذُ بِكَ مِنَ الْجُبْنِ وَالْبُخْلِ، وَأَعُوذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ وَقَهْرِ الرِّجَالِ\nAllahumma inni a’udhu bika minal-hammi wal-hazan, wa a’udhu bika minal-‘ajzi wal-kasal, wa a’udhu bika minal-jubni wal-bukhl, wa a’udhu bika min ghalabatid-dayni wa qahrir-rijal\nO Allah, I seek refuge in You from anxiety and sorrow, from weakness and laziness, from cowardice and stinginess, and from being overpowered by debt and subjugation by men.\nReference: Sunan Abu Dawood 5092</item>
+
+        <!-- 8 -->
+        <item>اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذِهِ اللَّيْلَةِ، فَتْحَهَا، وَنَصْرَهَا، وَنُورَهَا، وَبَرَكَتَهَا، وَهُدَاهَا\nAllahumma inni as’aluka khayra hathihil-laylah, fathaha, wa nasraha, wa nooraha, wa barakataha, wa hudaha\nO Allah, I ask You for the good of this night, its opening, victory, light, blessings, and guidance.\nReference: Adapted from Sunan Abu Dawood 5093</item>
+
+        <!-- 9 -->
+        <item>اللَّهُمَّ إِنِّي أَسْأَلُكَ رَحْمَةً مِنْ عِنْدِكَ تَهْدِي بِهَا قَلْبِي، وَتَجْمَعُ بِهَا أَمْرِي، وَتَلُمُّ بِهَا شَعَثِي\nAllahumma inni as’aluka rahmatan min ‘indika tahdi biha qalbi, wa tajma’u biha amri, wa talummu biha sha’athi\nO Allah, I ask You for mercy from You by which You guide my heart, gather my affairs, and mend my scattered state.\nReference: Musnad Ahmad 24357</item>
+
+        <!-- 10 -->
+        <item>اللَّهُمَّ بِكَ أُحَاوِلُ، وَبِكَ أُصَاوِلُ، وَبِكَ أُقَاتِلُ\nAllahumma bika uhawilu, wa bika usawilu, wa bika uqatilu\nO Allah, by You I advance, by You I attack, and by You I fight.\nReference: Sunan Abu Dawood 2632</item>
+    </string-array>
+
+    <string-array name="morning_azkar">
+        <!-- 1 -->
+        <item>أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ\nAsbahna wa asbahal-mulku lillah, wal-hamdulillah, la ilaha illallah wahdahu la sharika lah\nWe have entered the morning and the dominion belongs to Allah. Praise be to Allah. There is none worthy of worship except Allah alone, without partner.\nReference: Sunan Abu Dawood 5076</item>
+
+        <!-- 2 -->
+        <item>اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ\nAllahumma bika asbahna, wa bika nahya, wa bika namutu, wa ilaykan-nushur\nO Allah, by You we enter the morning, by You we live, by You we die, and to You is the resurrection.\nReference: Jami` at-Tirmidhi 3391</item>
+
+        <!-- 3 -->
+        <item>سُبْحَانَ اللَّهِ وَبِحَمْدِهِ: عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ\nSubhanallahi wa bihamdihi: Adada khalqihi, wa ridha nafsihi, wa zinata arshihi, wa midada kalimatihi\nGlory is to Allah and praise is to Him, by the multitude of His creation, by His Pleasure, by the weight of His Throne, and by the extent of His Words.\nReference: Sahih Muslim 2726</item>
+
+        <!-- 4 -->
+        <item>اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي\nAllahumma ‘afini fi badani, Allahumma ‘afini fi sam’i, Allahumma ‘afini fi basari\nO Allah, grant me health in my body. O Allah, grant me health in my hearing. O Allah, grant me health in my sight.\nReference: Sunan Abu Dawood 5090</item>
+
+        <!-- 5 -->
+        <item>حَسْبِيَ اللَّهُ لَا إِلَهَ إِلَّا هُوَ، عَلَيْهِ تَوَكَّلْتُ، وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ\nHasbiyallahu la ilaha illa Huwa, ‘alayhi tawakkaltu, wa Huwa Rabbul-‘Arshil-‘Azim\nSufficient for me is Allah; there is no deity except Him. On Him I have relied, and He is the Lord of the Great Throne.\nReference: Quran 9:129</item>
+
+        <!-- 6 -->
+        <item>اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ كُلِّ دَابَّةٍ أَنْتَ آخِذٌ بِنَاصِيَتِهَا\nAllahumma inni a’udhu bika min sharri nafsi, wa min sharri kulli dabbatin anta akhidhun binasiyatiha\nO Allah, I seek refuge in You from the evil of my soul and from the evil of every creature You hold by its forelock.\nReference: Sunan Abu Dawood 5091</item>
+
+        <!-- 7 -->
+        <item>أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ\nAstaghfirullahal-‘Azim alladhi la ilaha illa Huwal-Hayyul-Qayyum wa atubu ilayh\nI seek the forgiveness of Allah the Mighty, besides whom there is no deity, the Ever-Living, the Sustainer, and I repent to Him.\nReference: General Sunnah</item>
+
+        <!-- 8 -->
+        <item>اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَأَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ، وَأَعُوذُ بِكَ مِنَ الْجُبْنِ وَالْبُخْلِ، وَأَعُوذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ وَقَهْرِ الرِّجَالِ\nAllahumma inni a’udhu bika minal-hammi wal-hazan, wa a’udhu bika minal-‘ajzi wal-kasal, wa a’udhu bika minal-jubni wal-bukhl, wa a’udhu bika min ghalabatid-dayni wa qahrir-rijal\nO Allah, I seek refuge in You from anxiety and sorrow, from weakness and laziness, from cowardice and stinginess, and from being overpowered by debt and subjugation by men.\nReference: Sunan Abu Dawood 5092</item>
+
+        <!-- 9 -->
+        <item>اللَّهُمَّ اجْعَلْ فِي قَلْبِي نُورًا، وَفِي لِسَانِي نُورًا، وَفِي بَصَرِي نُورًا، وَفِي سَمْعِي نُورًا\nAllahummaj’al fi qalbi nooran, wa fi lisani nooran, wa fi basari nooran, wa fi sam’i nooran\nO Allah, place light in my heart, light in my tongue, light in my sight, and light in my hearing.\nReference: Sahih al-Bukhari 6316</item>
+
+        <!-- 10 -->
+        <item>اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذَا الْيَوْمِ، فَتْحَهُ، وَنَصْرَهُ، وَنُورَهُ، وَبَرَكَتَهُ، وَهُدَاهُ\nAllahumma inni as’aluka khayra hathal-yaum, fathahu, wa nasrahu, wa noorahu, wa barakatahu, wa hudahu\nO Allah, I ask You for the good of this day, its opening, victory, light, blessings, and guidance.\nReference: Sunan Abu Dawood 5093</item>
+    </string-array>
+
+    <string-array name="sleeping_azkar">
+        <!-- 1 -->
+        <item>بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا\nBismika Allahumma amutu wa ahya\nIn Your name, O Allah, I die and I live.\nReference: Sahih al-Bukhari 6324</item>
+
+        <!-- 2 -->
+        <item>اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ\nAllahumma qini ‘adhabaka yawma tab’athu ‘ibadaka\nO Allah, protect me from Your punishment on the Day You resurrect Your servants.\nReference: Sunan Abu Dawood 5046</item>
+
+        <!-- 3 -->
+        <item>اللَّهُمَّ أَسْلَمْتُ نَفْسِي إِلَيْكَ، وَفَوَّضْتُ أَمْرِي إِلَيْكَ، وَوَجَّهْتُ وَجْهِي إِلَيْكَ\nAllahumma aslamtu nafsi ilayka, wa fawwadtu amri ilayka, wa wajjahtu wajhi ilayka\nO Allah, I surrender myself to You, entrust my affairs to You, and turn my face to You.\nReference: Sahih al-Bukhari 6315</item>
+
+        <!-- 4 -->
+        <item>اللَّهُمَّ إِنِّي أَعُوذُ بِوَجْهِكَ الْكَرِيمِ وَكَلِمَاتِكَ التَّامَّاتِ مِنْ شَرِّ مَا أَنَا آخِذٌ بِهِ\nAllahumma inni a’udhu bi-wajhikal-karimi wa kalimatikat-tammati min sharri ma ana akhidhun bihi\nO Allah, I seek refuge in Your Noble Face and Perfect Words from the evil of what I grasp.\nReference: Sunan Abu Dawood 5050</item>
+
+        <!-- 5 -->
+        <item>اللَّهُمَّ رَبَّ السَّمَوَاتِ وَرَبَّ الْأَرْضِ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ\nAllahumma Rabbas-samawati wa Rabb-al-ard, a’udhu bika min sharri nafsi, wa min sharrish-shaytani wa shirkihi\nO Allah, Lord of the heavens and earth, I seek refuge in You from the evil of myself and the evil of Satan and his helpers.\nReference: Sunan Abu Dawood 5051</item>
+
+        <!-- 6 -->
+        <item>اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ النَّارِ، وَمِنْ عَذَابِ الْقَبْرِ\nAllahumma inni a’udhu bika min ‘adhabin-nar, wa min ‘adhabil-qabr\nO Allah, I seek refuge in You from the punishment of Hellfire and the punishment of the grave.\nReference: Sahih al-Bukhari 6323</item>
+
+        <!-- 7 -->
+        <item>اللَّهُمَّ بِاسْمِكَ أَحْيَا وَبِاسْمِكَ أَمُوتُ\nAllahumma bismika ahya wa bismika amut\nO Allah, in Your name I live and in Your name I die.\nReference: Sahih al-Bukhari 6325</item>
+
+        <!-- 8 -->
+        <item>سُبْحَانَ اللَّهِ (٣٣) ، الْحَمْدُ لِلَّهِ (٣٣) ، اللَّهُ أَكْبَرُ (٣٤)\nSubhanallah (33x), Alhamdulillah (33x), Allahu Akbar (34x)\nGlory be to Allah (33x), Praise be to Allah (33x), Allah is the Greatest (34x).\nReference: Sahih Muslim 2727</item>
+
+        <!-- 9 -->
+        <item>اللَّهُمَّ إِنَّكَ خَلَقْتَ نَفْسِي وَأَنْتَ تَوَفَّاهَا، لَكَ مَمَاتُهَا وَمَحْيَاهَا\nAllahumma innaka khalaqta nafsi wa anta tawaffaha, laka mamatuha wa mahyaha\nO Allah, You created my soul and You take it, to You belongs its death and life.\nReference: Sahih al-Bukhari 6322</item>
+
+        <!-- 10 -->
+        <item>اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْفَقْرِ، وَالْقِلَّةِ، وَالذِّلَّةِ، وَأَعُوذُ بِكَ مِنْ أَنْ أَظْلِمَ أَوْ أُظْلَمَ\nAllahumma inni a’udhu bika minal-faqri, wal-qillati, wadh-dhillati, wa a’udhu bika min an azlima aw uzlama\nO Allah, I seek refuge in You from poverty, scarcity, and humiliation. I seek refuge in You from oppressing or being oppressed.\nReference: Sunan Abu Dawood 1544</item>
+    </string-array>
+
+    <string-array name="wearing_new_clothes_azkar">
+        <!-- 1 -->
+        <item>الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي مَا أُوَارِي بِهِ عَوْرَتِي وَأَتَجَمَّلُ بِهِ فِي حَيَاتِي\nAlhamdulillahil-ladhi kasani ma uwari bihi ‘awrati wa atajammalu bihi fi hayati\nPraise be to Allah who has clothed me with which I cover my nakedness and adorn myself in my life.\nReference: Sunan Ibn Majah 3618</item>
+
+        <!-- 2 -->
+        <item>اللَّهُمَّ لَكَ الْحَمْدُ أَنْتَ كَسَوْتَنِيهِ، أَسْأَلُكَ خَيْرَهُ وَخَيْرَ مَا صُنِعَ لَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّهِ وَشَرِّ مَا صُنِعَ لَهُ\nAllahumma lakal-hamdu anta kasawtanihi, as’aluka khayrahu wa khayra ma suni’a lahu, wa a’udhu bika min sharrihi wa sharri ma suni’a lahu\nO Allah, praise is Yours. You have clothed me with it. I ask You for its goodness and the goodness of what it was made for. I seek refuge in You from its evil.\nReference: Sunan Abu Dawood 4020</item>
+
+        <!-- 3 -->
+        <item>بِسْمِ اللَّهِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ خَيْرِهِ وَخَيْرِ مَا هُوَ لَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّهِ وَشَرِّ مَا هُوَ لَهُ\nBismillah, Allahumma inni as’aluka min khayrihi wa khayri ma huwa lahu, wa a’udhu bika min sharrihi wa sharri ma huwa lahu\nIn the name of Allah. O Allah, I ask You for its goodness and the goodness it is intended for. I seek refuge in You from its evil.\nReference: Sunan at-Tirmidhi 1767</item>
+
+        <!-- 4 -->
+        <item>الْحَمْدُ لِلَّهِ الَّذِي رَزَقَنِي مَا أُوَارِي بِهِ عَوْرَتِي وَأُجَمِّلُ بِهِ فِي النَّاسِ\nAlhamdulillahil-ladhi razaqani ma uwari bihi ‘awrati wa ujammilu bihi fin-nas\nPraise be to Allah who has provided me with clothing to cover my nakedness and adorn myself among people.\nReference: Sunan Ibn Majah 3619</item>
+
+        <!-- 5 -->
+        <item>اللَّهُمَّ زَيِّنَّا بزينةِ الإِيمَانِ، وَاجْعَلْنَا هُدَاةً مُهْتَدِينَ\nAllahumma zayyinna bizeenatil-imaan, waj’alna hudaatan muhtadeen\nO Allah, adorn us with the beauty of faith, and make us guides who are rightly guided.\nReference: General Sunnah</item>
+
+        <!-- 6 -->
+        <item>اللَّهُمَّ طَهِّرْ هَذَا الثَّوْبَ، وَطَهِّرْ قَلْبِي مِنَ النِّفَاقِ\nAllahumma tahhir hathath-thawb, wa tahhir qalbi minan-nifaq\nO Allah, purify this garment and purify my heart from hypocrisy.\nReference: Inspired by Quran 9:77</item>
+
+        <!-- 7 -->
+        <item>الْحَمْدُ لِلَّهِ الَّذِي أَنْعَمَ عَلَيَّ بِهَذَا الثَّوْبِ، وَلَمْ يَجْعَلْنِي مِنَ الْعُرَاةِ\nAlhamdulillahil-ladhi an’ama ‘alayya bihathath-thawb, wa lam yaj’alni minal-‘ura\nPraise be to Allah who has blessed me with this garment and not left me naked.\nReference: Inspired by Quran 16:81</item>
+
+        <!-- 8 -->
+        <item>اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذَا الثَّوْبِ، وَأَعُوذُ بِكَ مِنْ خُيَلَاءِ الْجَاهِلِيَّةِ\nAllahumma inni as’aluka khayra hathath-thawb, wa a’udhu bika min khuyala’il-jahiliyyah\nO Allah, I ask You for the good of this garment, and I seek refuge in You from the vanity of ignorance.\nReference: Inspired by Sahih al-Bukhari 5819</item>
+
+        <!-- 9 -->
+        <item>اللَّهُمَّ اجْعَلْ هَذَا الثَّوْبَ زِينَةً لِي فِي الدُّنْيَا، وَذُخْرًا لِي فِي الْآخِرَةِ\nAllahummaj’al hathath-thawb zeenatan li fid-dunya, wa dhukhran li fil-akhirah\nO Allah, make this garment an adornment for me in this world and a provision for me in the Hereafter.\nReference: Inspired by Quran 7:32</item>
+
+        <!-- 10 -->
+        <item>اللَّهُمَّ طِبْ لِي هَذَا الثَّوْبَ، وَأَذْهِبْ عَنِّي كُلَّ سُوءٍ\nAllahumma tib li hathath-thawb, wa adhhib ‘anni kulla su’\nO Allah, bless me in this garment, and remove all harm from me.\nReference: Inspired by Sunan Abu Dawood 4020</item>
+    </string-array>
+
+    <string-array name="Janazah_death_azkar">
+        <!-- 1 -->
+        <item>إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ\nInna lillahi wa inna ilayhi raji’un\nIndeed, to Allah we belong, and to Him we shall return.\nReference: Quran 2:156</item>
+
+        <!-- 2 -->
+        <item>اللَّهُمَّ اغْفِرْ لَهُ وَارْحَمْهُ، وَعَافِهِ وَاعْفُ عَنْهُ، وَأَكْرِمْ نُزُلَهُ\nAllahummaghfir lahu warhamhu, wa ‘afihi wa’fu ‘anhu, wa akrim nuzulahu\nO Allah, forgive him, have mercy on him, grant him safety, pardon him, and honor his reception.\nReference: Sahih Muslim 963</item>
+
+        <!-- 3 -->
+        <item>اللَّهُمَّ اجْعَلْ قَبْرَهُ رَوْضَةً مِنْ رِيَاضِ الْجَنَّةِ، وَلَا تَجْعَلْهُ حُفْرَةً مِنْ حُفَرِ النَّارِ\nAllahummaj’al qabrahu rawdatan min riyadil-jannah, wa la taj’alhu hufratan min hufarin-nar\nO Allah, make his grave a garden from the gardens of Paradise, and do not make it a pit from the pits of Hell.\nReference: Sahih al-Bukhari 1242</item>
+
+        <!-- 4 -->
+        <item>اللَّهُمَّ أَبْدِلْهُ دَارًا خَيْرًا مِنْ دَارِهِ، وَأَهْلًا خَيْرًا مِنْ أَهْلِهِ\nAllahumma abdilhu daran khayran min darihi, wa ahlan khayran min ahlihi\nO Allah, replace his home with a better home, and his family with a better family.\nReference: Sahih Muslim 920</item>
+
+        <!-- 5 -->
+        <item>اللَّهُمَّ ثَبِّتْهُ عَلَى الصِّرَاطِ يَوْمَ تَزِلُّ فِيهِ الْأَقْدَامُ\nAllahumma thabbit-hu ‘alas-sirati yawma tazillu fihil-aqdam\nO Allah, keep him firm on the Bridge (Sirat) on the day when feet will slip.\nReference: Inspired by Quran 19:71</item>
+
+        <!-- 6 -->
+        <item>اللَّهُمَّ اغْفِرْ لِحَيِّنَا وَمَيِّتِنَا، وَشَاهِدِنَا وَغَائِبِنَا، وَصَغِيرِنَا وَكَبِيرِنَا\nAllahummaghfir lihayyina wa mayyitina, wa shahidina wa gha’ibina, wa sagheerina wa kabeerina\nO Allah, forgive our living and our dead, those present and absent, our young and old.\nReference: Sunan Abu Dawood 3201</item>
+
+        <!-- 7 -->
+        <item>اللَّهُمَّ إِنَّ فُلَانَ ابْنَ فُلَانٍ فِي ذِمَّتِكَ، فَقِهِ مِنْ فِتْنَةِ الْقَبْرِ وَعَذَابِ النَّارِ\nAllahumma inna [Name] ibn [Name] fi dhimmatika, faqihi min fitnatil-qabri wa ‘adhabin-nar\nO Allah, [Name] son of [Name] is under Your protection, so protect him from the trial of the grave and the punishment of Hellfire.\nReference: Sunan Abu Dawood 3202</item>
+
+        <!-- 8 -->
+        <item>اللَّهُمَّ إِنَّهُ عَبْدُكَ، وَابْنُ عَبْدِكَ، خَرَجَ مِنْ رَوْحِ الدُّنْيَا وَسَعَتِهَا إِلَى ظُلْمَةِ الْقَبْرِ\nAllahumma innahu ‘abduka, wabnu ‘abdika, kharaja min rawdihid-dunya wa sa’atiha ila zulmatil-qabr\nO Allah, he is Your servant, the son of Your servant. He has departed from the comfort of this world to the darkness of the grave.\nReference: Sunan Ibn Majah 1498</item>
+
+        <!-- 9 -->
+        <item>اللَّهُمَّ أَعِذْهُ مِنْ عَذَابِ الْقَبْرِ، وَمِنْ عَذَابِ النَّارِ، وَافْسَحْ لَهُ فِي قَبْرِهِ\nAllahumma a’idh-hu min ‘adhabil-qabr, wa min ‘adhabin-nar, wafsah lahu fi qabrihi\nO Allah, protect him from the punishment of the grave and Hellfire, and widen his grave.\nReference: Sahih Muslim 963</item>
+
+        <!-- 10 -->
+        <item>اللَّهُمَّ لَا تَحْرِمْنَا أَجْرَهُ، وَلَا تَفْتِنَّا بَعْدَهُ\nAllahumma la tahrimna ajrahu, wa la taftinna ba’dahu\nO Allah, do not deprive us of his reward, and do not test us after him.\nReference: Sahih al-Bukhari 1242</item>
+    </string-array>
+
+    <string-array name="mosque_walk_azkar">
+        <!-- 1 -->
+        <item>اللَّهُمَّ اجْعَلْ فِي قَلْبِي نُورًا، وَفِي لِسَانِي نُورًا، وَفِي بَصَرِي نُورًا، وَفِي سَمْعِي نُورًا\nAllahummaj’al fi qalbi nooran, wa fi lisani nooran, wa fi basari nooran, wa fi sam’i nooran\nO Allah, place light in my heart, light in my tongue, light in my sight, and light in my hearing.\nReference: Sahih al-Bukhari 6316</item>
+
+        <!-- 2 -->
+        <item>اللَّهُمَّ إِنِّي أَسْأَلُكَ بِحَقِّ السَّائِلِينَ عَلَيْكَ، وَبِحَقِّ مَمْشَايَ هَذَا\nAllahumma inni as’aluka bihaqqis-sa’ilina ‘alayka, wa bihaqqi mamshaya hadha\nO Allah, I ask You by the right of those who ask You and by the right of this walk of mine.\nReference: Sunan Ibn Majah 1381</item>
+
+        <!-- 3 -->
+        <item>سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَلَا إِلَهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ\nSubhanallah, walhamdulillah, wa la ilaha illallah, wallahu akbar\nGlory be to Allah, praise be to Allah, there is no god but Allah, and Allah is the Greatest.\nReference: General Sunnah</item>
+
+        <!-- 4 -->
+        <item>اللَّهُمَّ اغْفِرْ لِي ذُنُوبِي، وَافْتَحْ لِي أَبْوَابَ رَحْمَتِكَ\nAllahummaghfir li dhunubi, waftah li abwaba rahmatik\nO Allah, forgive my sins and open the doors of Your mercy for me.\nReference: Inspired by Quran 7:56</item>
+
+        <!-- 5 -->
+        <item>اللَّهُمَّ إِنِّي أَسْأَلُكَ حُبَّكَ، وَحُبَّ مَنْ يُحِبُّكَ، وَحُبَّ عَمَلٍ يُقَرِّبُنِي إِلَى حُبِّكَ\nAllahumma inni as’aluka hubbaka, wa hubba man yuhibbuka, wa hubba ‘amalin yuqarribuni ila hubbika\nO Allah, I ask You for Your love, the love of those who love You, and the love of deeds that bring me closer to Your love.\nReference: Sunan at-Tirmidhi 3235</item>
+
+        <!-- 6 -->
+        <item>اللَّهُمَّ اجْعَلْ فِي قَلْبِي إِيمَانًا، وَفِي لِسَانِي ذِكْرًا، وَفِي عَمَلِي صِدْقًا\nAllahummaj’al fi qalbi imanan, wa fi lisani dhikran, wa fi ‘amali sidqan\nO Allah, place faith in my heart, remembrance on my tongue, and sincerity in my actions.\nReference: Inspired by Quran 26:89</item>
+
+        <!-- 7 -->
+        <item>اللَّهُمَّ طَهِّرْ قَلْبِي، وَاسْتُرْ عَوْرَتِي، وَحَصِّنْ فَرْجِي\nAllahumma tahhir qalbi, wastur ‘awrati, wa hassin farji\nO Allah, purify my heart, cover my faults, and protect my chastity.\nReference: Inspired by Quran 33:35</item>
+
+        <!-- 8 -->
+        <item>اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ زَوَالِ نِعْمَتِكَ، وَتَحَوُّلِ عَافِيَتِكَ، وَفَجَاءَةِ نِقْمَتِكَ\nAllahumma inni a’udhu bika min zawali ni’matik, wa tahawwuli ‘afiyatik, wa faja’ati niqmatik\nO Allah, I seek refuge in You from the removal of Your blessings, the loss of Your protection, and the suddenness of Your punishment.\nReference: Sahih Muslim 2739</item>
+
+        <!-- 9 -->
+        <item>اللَّهُمَّ ارْزُقْنِي الْهُدَى، وَالسَّدَادَ، وَالْعَفَافَ، وَالْغِنَى\nAllahummarzuqni al-huda, was-sadad, wal-‘afaf, wal-ghina\nO Allah, grant me guidance, integrity, chastity, and contentment.\nReference: Sunan at-Tirmidhi 3484</item>
+
+        <!-- 10 -->
+        <item>اللَّهُمَّ إِنِّي أَسْأَلُكَ فِعْلَ الْخَيْرَاتِ، وَتَرْكَ الْمُنْكَرَاتِ، وَحُبَّ الْمَسَاكِينِ\nAllahumma inni as’aluka fi’lal-khayrat, wa tarkal-munkarat, wa hubbal-masakin\nO Allah, I ask You to enable me to do good deeds, abandon evil deeds, and love the poor.\nReference: Sunan at-Tirmidhi 3235</item>
+    </string-array>
 </resources>
 

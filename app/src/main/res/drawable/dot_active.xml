@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fill color (green) -->
+    <solid android:color="@color/dot_green" />
+
+    <!-- Rounded corners for pill shape -->
+    <corners android:radius="50dp" />
+
+    <!-- Size: width is longer than height for a pill-like appearance -->
+    <size
+        android:width="16dp"
+        android:height="8dp" />
+</shape>

@@ -2,4 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+        <!-- Example green color for active dot -->
+        <color name="dot_green">#0E7D4F</color>
+        <!-- Example gray color for inactive dot -->
+        <color name="dot_gray">#CFCFCF</color>
+
+
+
 </resources>

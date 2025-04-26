@@ -1,175 +1,425 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:background="@android:color/white"
     tools:context=".MainActivity"
-    android:background="#E0D9D9"
     android:fitsSystemWindows="true"
-android:paddingBottom="20dp"
     >
+    <ScrollView
+        android:layout_above="@id/bottom_nav"
+        android:id="@+id/home_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@android:color/white">
+        <!-- Main vertical container -->
+        <LinearLayout
+            android:id="@+id/home_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="top">
+
+            <!-- Top bar: App logo (left) + Profile icon (right) -->
+            <LinearLayout
+                android:id="@+id/top_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="20dp">
 
 
-    <!-- Your bottom bar -->
+                <ImageView
+                    android:id="@+id/app_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ask_a_muslim_icon"
+                    android:contentDescription="@string/ask_a_muslim_icon" />
+
+                <!-- Spacer to push the profile icon to the right -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <!-- Right: Profile Icon -->
+                <ImageView
+                    android:id="@+id/profile_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/profile"
+                    android:contentDescription="@string/profile_icon" />
+            </LinearLayout>
+
+
+            <!-- Greeting Text -->
+            <TextView
+                android:id="@+id/greeting_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_back"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                />
+
+            <!-- Featured Image -->
+            <ImageSwitcher
+                android:id="@+id/featured_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+
+
+                android:layout_marginBottom="16dp"
+                />
+
+            <!-- Features Label -->
+            <TextView
+                android:id="@+id/features_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/features"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                />
+
+            <!-- Features Grid -->
+            <!-- Example: 2 columns, repeating Qibla cards -->
+            <GridLayout
+                android:id="@+id/features_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="3"
+                android:useDefaultMargins="true"
+                android:alignmentMode="alignMargins"
+                android:layout_marginBottom="16dp">
+
+                <!-- Feature Card Example (Qiblah) -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/cards_outline"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:id="@+id/qiblah_icon"
+                    android:layout_margin="8dp">
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/qiblah"
+                        android:contentDescription="@string/compass_icon"
+                        android:layout_gravity="center_horizontal" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/qiblah"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/coming_soon"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/quran_icon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/cards_outline"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:layout_margin="8dp">
+
+                    <ImageView
+
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/quran_big"
+                        android:contentDescription="@string/quran_icon"
+                        android:layout_gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quran"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                       android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/read_the_holy_quran"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/cards_outline"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:id="@+id/prayer_icon"
+                    android:layout_margin="8dp">
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/prayer_big"
+                        android:contentDescription="@string/prayer_icon"
+                        android:layout_gravity="center_horizontal" />
+
+                    <TextView
+                        android:id="@+id/prayer_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prayer"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/track_daily_prayers"
+                      android:textColor="@color/black"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/cards_outline"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:id="@+id/courses_icon"
+                    android:layout_margin="8dp">
+
+                    <ImageView
+
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/courses_big"
+                        android:contentDescription="@string/book_icon"
+                        android:layout_gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/courses"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                       android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/learn_about_islam"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+                <!-- Repeat more items for your features as needed -->
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/cards_outline"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:layout_margin="8dp">
+
+                    <ImageView
+                        android:id="@+id/nearbyMosques_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/mosque_big_icon"
+                        android:contentDescription="@string/big_mosque_icon"
+                        android:layout_gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nearby_mosques"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/coming_soon"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/cards_outline"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:id="@+id/Azkar_icon"
+                    android:layout_margin="8dp">
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sebha"
+                        android:contentDescription="@string/a_string_of_beads_icon"
+                        android:layout_gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/azkar"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/daily_remember"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+                <!-- For example, copy the above block and change icons/text -->
+            </GridLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
     <LinearLayout
-        android:id="@+id/bottom_bar"
+        android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-android:background="#C5BFBF"
-        android:baselineAligned="false"
+        android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/outline_button_bg"
+        android:paddingVertical="4dp">
 
-        app:layout_constraintStart_toStartOf="parent"
-
-        >
-
-   <LinearLayout
-       android:layout_width="0dp"
-       android:layout_height="match_parent"
-       android:orientation="vertical"
-       android:layout_weight="1"
-       android:id="@+id/Home_button"
-       android:clickable="true"
-       android:focusable="true"
-       tools:ignore="UseCompoundDrawables"
-       android:background="?android:attr/selectableItemBackground"
-
-       >
-
-
-
-      <ImageView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:src="@drawable/home_icon2"
-          android:layout_gravity="center"
-          />
-
-       <TextView
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-
-           android:textAlignment="center"
-    android:text="@string/home"
-           android:textColor="@color/black"
-           />
-   </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1"
-
-        android:clickable="true"
-        android:focusable="true"
-        android:id="@+id/Azkar"
-        android:layout_gravity="center"
-        android:background="?android:attr/selectableItemBackground"
-
-        >
-        <ImageView
-            android:contentDescription="@string/islamic_remembrance"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#00000000"
-
-
-            android:src="@drawable/praise_15178646"
-
-            />
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/remembrance"
-    android:textColor="@color/black"
-    android:textAlignment="center"
-    />
-
-        </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:clickable="true"
-        android:focusable="true"
-        android:id="@+id/prayers_button"
-        android:layout_gravity="center"
-        android:background="?android:attr/selectableItemBackground"
-
-        >
-        <ImageView
-            android:contentDescription="@string/prayers_time_icon"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-android:contextClickable="true"
-            android:background="#00000000"
-            android:src="@drawable/mosque_icon"
-
-/>
+        <!-- Navigation Item: Home -->
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/prayers_time"
-
-
-
-            android:textColor="@color/black"
-            android:textAlignment="textEnd"
-            />
-    </LinearLayout>
-
-
-        <LinearLayout
+            android:id="@+id/nav_home_text"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
+
             android:layout_weight="1"
-            android:id="@+id/Courses_button"
-            android:clickable="true"
-            android:focusable="true"
-            android:layout_gravity="center"
-            android:background="?android:attr/selectableItemBackground"
-            >
-            <ImageView
-                android:contentDescription="@string/e_learning_icon"
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home"
+            android:textColor="#616161 "
+            android:textStyle="bold"
+            app:drawableTopCompat="@drawable/home"
+            android:gravity="center"
+            />
 
 
-                android:focusable="true"
-                android:src="@drawable/courses_icon"
-                android:clickable="true"
+        <TextView
+            android:gravity="center"
+            android:id="@+id/nav_quran_text"
+            android:layout_width="0dp"
 
-                />
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/quran"
+            android:textColor="#616161 "
+            android:textStyle="bold"
+            app:drawableTopCompat="@drawable/quran" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/courses"
-                android:textColor="@color/black"
-                android:textAlignment="center"
+        <TextView
+            android:gravity="center"
+            android:id="@+id/nav_paryer_text"
+            android:layout_width="0dp"
 
-                />
-        </LinearLayout>
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/prayer"
+            android:textColor="#616161"
+            android:textStyle="bold"
+            app:drawableTopCompat="@drawable/prayer" />
 
+        <TextView
+            android:gravity="center"
+            android:id="@+id/nav_courses_text"
+            android:layout_width="0dp"
+
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/courses"
+            android:textColor="#616161 "
+            android:textStyle="bold"
+            app:drawableTopCompat="@drawable/courses" />
+
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/nav_more_text"
+            android:layout_width="0dp"
+
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/more"
+            android:textColor="#616161 "
+            android:textStyle="bold"
+            app:drawableTopCompat="@drawable/more" />
 
 
     </LinearLayout>
 
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

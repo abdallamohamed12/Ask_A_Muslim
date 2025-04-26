@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    android:background="@android:color/white"
+    android:layout_marginTop="30dp">
+
+    <!-- Back arrow + dynamic title -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_left"
+        android:contentDescription="@string/arrow_left_icon"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_margin="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/screenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beginners Courses"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+
+        android:textColor="@color/black"
+        android:layout_toEndOf="@id/backButton"
+        android:layout_alignBaseline="@id/backButton"
+        android:layout_marginStart="8dp"/>
+
+    <!-- This ListView will inflate your row-template for each course -->
+    <ListView
+        android:id="@+id/coursesListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/backButton"
+        android:divider="@color/dot_gray"
+        android:dividerHeight="1dp"
+        android:padding="8dp"
+        android:clipToPadding="false"/>
+</RelativeLayout>
