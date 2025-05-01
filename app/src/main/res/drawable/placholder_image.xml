@@ -1,0 +1,6 @@
+<!-- res/drawable/placeholder_image.xml -->
+<shape android:shape="rectangle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#EEEEEE"/>
+    <corners android:radius="8dp"/>
+</shape>

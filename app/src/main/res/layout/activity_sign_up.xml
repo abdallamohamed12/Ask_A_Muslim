@@ -16,6 +16,7 @@
 
 
 <ImageView
+    android:contentDescription="@string/arrow_left_icon"
     android:layout_width="wrap_content"
     android:layout_height="40dp"
 android:layout_marginStart="16dp"
@@ -60,7 +61,7 @@ android:layout_below="@id/sign_up_textView"
         />
 
     <EditText
-        android:layout_centerInParent="true"
+
         android:textColor="@color/black"
 
         android:layout_width="match_parent"
@@ -69,6 +70,7 @@ android:layout_below="@id/sign_up_textView"
         android:id="@+id/E_mail_edit_view"
         android:autofillHints="emailAddress"
         android:hint="@string/e_mail_hint"
+       android:layout_below="@id/lastName_edit_view"
         android:textColorHint="#8E8888"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="20dp"
@@ -80,15 +82,15 @@ android:layout_below="@id/sign_up_textView"
 
 
     <EditText
-        android:layout_above="@id/E_mail_edit_view"
-        android:textColor="@color/black"
 
+        android:textColor="@color/black"
+android:layout_centerVertical="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
-        android:id="@+id/Username_edit_view"
-        android:autofillHints="username"
-        android:hint="@string/enter_username"
+        android:id="@+id/firstName_edit_view"
+        android:autofillHints="name"
+        android:hint="First Name"
         android:textColorHint="#8E8888"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="16dp"
@@ -96,6 +98,22 @@ android:layout_below="@id/sign_up_textView"
        android:background="@drawable/edit_view_background"
         />
 
+    <EditText
+        android:layout_below="@id/firstName_edit_view"
+        android:textColor="@color/black"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:id="@+id/lastName_edit_view"
+        android:autofillHints="name"
+        android:hint="Last Name"
+        android:textColorHint="#8E8888"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edit_view_background"
+        />
     <EditText
         android:layout_centerInParent="true"
         android:textColor="@color/black"
@@ -139,8 +157,7 @@ android:layout_below="@id/Password_edit_view"
         android:layout_centerInParent="true"
         android:textColor="@color/white"
         android:background="@drawable/rounded_button_background"
-        android:backgroundTint="@null"
-        android:tint="@null"
+
         />
 
 

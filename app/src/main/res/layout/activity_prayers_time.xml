@@ -34,7 +34,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cairo,Egypt"
+            android:text=""
+            android:id="@+id/locationPrayerTime"
             android:textColor="@color/black"
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
@@ -71,7 +72,7 @@
                 android:id="@+id/fajrCheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false" />
+                />
 
             <TextView
                 android:id="@+id/fajrPrayer"
@@ -111,7 +112,7 @@
                 android:id="@+id/DhuhrCheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false" />
+              />
 
             <TextView
                 android:id="@+id/DhuhrPrayer"
@@ -151,7 +152,7 @@
                 android:id="@+id/AsrCheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false" />
+              />
 
             <TextView
                 android:id="@+id/AsrPrayer"
@@ -191,7 +192,7 @@
                 android:id="@+id/MaghribCheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false" />
+           />
 
             <TextView
                 android:id="@+id/MaghribPrayer"
@@ -231,7 +232,7 @@
                 android:id="@+id/IshaCheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false" />
+               />
 
             <TextView
                 android:id="@+id/IshaPrayer"

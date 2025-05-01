@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>  <!-- XML Declaration (not an element) -->
+<network-security-config>              <!-- ROOT ELEMENT STARTS -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">ask-a-muslim.runasp.net</domain>
+    </domain-config>
+</network-security-config>             <!-- ROOT ELEMENT ENDS -->

@@ -40,4 +40,15 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    // Retrofit for networking
+    implementation (libs.retrofit)
+    implementation (libs.glide)
+    annotationProcessor (libs.compiler)
+// Retrofit with Gson converter (for JSON parsing automatically)
+    implementation (libs.converter.gson)
+
+// (Optional but recommended) OkHttp for logging network requests
+    implementation (libs.logging.interceptor)
+
+    implementation (libs.play.services.location)
 }

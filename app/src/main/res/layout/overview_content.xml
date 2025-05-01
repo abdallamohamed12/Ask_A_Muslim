@@ -12,7 +12,7 @@
             android:id="@+id/overviewTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="About This Course"
+            android:text="About This Course:\n--------------"
             android:textSize="18sp"
             android:textColor="@color/black"
             android:textStyle="bold"/>

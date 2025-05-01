@@ -109,7 +109,7 @@ android:layout_marginTop="20dp"
         android:drawableStart="@drawable/password_icon"
         android:drawablePadding="16dp"
         android:layout_below="@id/Email_or_Username_edit_view"
-        android:id="@+id/Password_edit_view"
+        android:id="@+id/passwordLogin_edit_view"
         />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -120,7 +120,7 @@ android:layout_marginTop="20dp"
         android:textColor="@android:color/white"
         android:text="@string/sign_in"
         android:id="@+id/signInBtn"
-        android:layout_below="@id/Password_edit_view"
+        android:layout_below="@id/passwordLogin_edit_view"
         android:layout_margin="20dp"
         android:textStyle="bold"
         android:layout_centerInParent="true"
