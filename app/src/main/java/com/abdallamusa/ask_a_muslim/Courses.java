@@ -220,6 +220,8 @@ public class Courses extends AppCompatActivity {
         api = rf.create(CoursesApi.class);
 
         enrollmentApi = rf.create(EnrollmentApi.class);
+        highlightCategory(allSectionBtn.getId());
+        loadAll();
 
     }
 

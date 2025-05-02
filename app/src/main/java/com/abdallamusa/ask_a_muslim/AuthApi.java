@@ -38,6 +38,8 @@ public interface AuthApi {
     Call<Void> deleteUser(
 
                @Path("id") String userId
+
+
     );
 
     public static class UpdateEmailRequest {

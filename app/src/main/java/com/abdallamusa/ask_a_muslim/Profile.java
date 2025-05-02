@@ -171,10 +171,11 @@ public class Profile extends AppCompatActivity {
                                     enrolledCourses.remove(i);
                                     adapter.notifyItemRemoved(i);
                                     count--;
+                                    numOfEnrolledCourses.setText(String.valueOf(count));
                                     break;
                                 }
 
-                                numOfEnrolledCourses.setText(String.valueOf(count));
+
 
                             }
                         } else {
@@ -184,6 +185,7 @@ public class Profile extends AppCompatActivity {
                             adapter.notifyDataSetChanged();
                         }
                     }
+                    @SuppressLint("NotifyDataSetChanged")
                     @Override public void onFailure(@NonNull Call<Void> call,
                                                     @NonNull Throwable t) {
                         Toast.makeText(Profile.this,

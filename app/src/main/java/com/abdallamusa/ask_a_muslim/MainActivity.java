@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
 TextView navHomeBtn , navQuranBtn , navPrayerBtn, navCoursesBtn , navMoreBtn;
 
+
+
+
 LinearLayout quranIcon , prayerIcon , azkarIcon , coursesIcon ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,7 @@ LinearLayout quranIcon , prayerIcon , azkarIcon , coursesIcon ;
         EdgeToEdge.enable(this);
 
         setContentView(R.layout.activity_main);
+
 
         navHomeBtn = findViewById(R.id.nav_home_text);
 

@@ -6,7 +6,9 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
 public interface ApiService {
-
+// put update data
+    // delete
+//Post creation of data
     @FormUrlEncoded
     @POST("Identity/Register/register")
     Call<RegisterResponse> registerUser(

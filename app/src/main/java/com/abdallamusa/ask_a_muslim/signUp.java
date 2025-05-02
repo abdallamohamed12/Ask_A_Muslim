@@ -106,7 +106,6 @@ public class signUp extends AppCompatActivity {
                                 .putString("auth_token", token)
                                 .putString("new_user_id", userId)
                                 .apply();
-                        SessionManager.get().saveSession(userId, token);
                          msg_signUpID = resp.body().getMessage();
                         Toast.makeText(signUp.this,
                                 "Registration successful!\n"+msg_signUpID,
