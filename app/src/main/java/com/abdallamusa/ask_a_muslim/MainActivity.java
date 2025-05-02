@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     };
 
+
     private int currentIndex = 0;
     private final Handler handler = new Handler();
     private Runnable imageSwitcherRunnable;

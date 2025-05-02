@@ -1,9 +1,10 @@
 package com.abdallamusa.ask_a_muslim;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -59,22 +60,20 @@ public class Courses extends AppCompatActivity {
     private TextView advancedInstructor1, advancedInstructor2;
     private AppCompatButton advancedStartBtn1, advancedStartBtn2;
 
-    // My Learning Section
-    private ImageView myLearningImage1, myLearningImage2;
-    private TextView myLearningTitle1, myLearningTitle2;
-
     private CoursesApi api;
+    private EnrollmentApi enrollmentApi;
     private String           a1Id, a2Id;
     private String           mainCourseId;
     private String           b1Id, b2Id;
     private String           i1Id, i2Id;
+
+    private final String studentId = SessionManager.get().getUserId();
     private AppCompatButton[] categoryButtons;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_courses);
-
 
         // Initialize Top Bar
         arrowBack = findViewById(R.id.arrowBack_ID);
@@ -220,8 +219,13 @@ public class Courses extends AppCompatActivity {
 
         api = rf.create(CoursesApi.class);
 
+        enrollmentApi = rf.create(EnrollmentApi.class);
 
     }
+
+
+
+
     private void loadAll() {
         api.getAll().enqueue(new Callback<List<CourseSummary>>() {
             @Override
@@ -244,11 +248,8 @@ public class Courses extends AppCompatActivity {
                         .into(mainCourseImage);
                 enrollNowBtn.setText("Enroll Now");
                 enrollNowBtn.setEnabled(true);
-                enrollNowBtn.setOnClickListener(v -> {
-                    enrollNowBtn.setText("Enrolled");
-                    enrollNowBtn.setEnabled(false);
-                    openDetail(mainCourseId);
-                });
+
+                enrollNowBtn.setOnClickListener(v->enroll(mainCourseId, enrollNowBtn));
 
                 // then wire the six cards exactly the same as in loadCategory()…
                 wireRow(list.get(1),
@@ -300,11 +301,7 @@ public class Courses extends AppCompatActivity {
                         .load(main.thumbnailUrl)
                         .into(mainCourseImage);
 
-                enrollNowBtn.setOnClickListener(v -> {
-                    enrollNowBtn.setText("Enrolled");
-                    enrollNowBtn.setEnabled(false);
-                    openDetail(mainCourseId);
-                });
+                enrollNowBtn.setOnClickListener(v->enroll(mainCourseId, enrollNowBtn));
 
                 // BEGINNER = index 1 & 2
                 wireRow(list.get(1),
@@ -351,15 +348,31 @@ public class Courses extends AppCompatActivity {
         Glide.with(this)
                 .load(cs.thumbnailUrl)
                 .into(img);
+        // enroll student in course by Calling Enrollment Api
 
-
-        btn.setOnClickListener(v -> {
-            btn.setText("Enrolled");
-            btn.setEnabled(false);
-            openDetail(cs.id);
-        });
+        btn.setOnClickListener(v->enroll(cs.id, btn));
     }
 
+    @SuppressLint("SetTextI18n")
+    private void enroll(String courseId, AppCompatButton btn){
+        // 1) POST to server
+        enrollmentApi.enrollCourse(new EnrollmentRequest(studentId, courseId))
+                .enqueue(new Callback<Void>(){
+                    @Override public void onResponse(@NonNull Call<Void> c, @NonNull Response<Void> r){
+                        // ignore success/fail here
+                    }
+                    @Override public void onFailure(@NonNull Call<Void> c, @NonNull Throwable t){
+                        Toast.makeText(Courses.this,"Enroll failed: "+t.getMessage(),
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+
+        // 3) update UI + navigate
+        btn.setText("Enrolled");
+        btn.setEnabled(false);
+        openDetail(courseId);
+    }
     private void openDetail(String courseId) {
         Intent i = new Intent(this, CoursesDetails.class);
 
@@ -377,7 +390,6 @@ public class Courses extends AppCompatActivity {
                 .setBackgroundResource(R.drawable.green_button);
     }
 }
-
 
 
 

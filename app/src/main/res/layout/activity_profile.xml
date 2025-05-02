@@ -58,7 +58,7 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             android:layout_marginTop="10dp"
-            android:text="Abdalla Mohamed Abdalla "
+            android:text="Name:  "
             android:layout_below="@id/profileIcon"
             android:layout_centerHorizontal="true"
             android:id="@+id/userName_ID"
@@ -68,7 +68,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Abdo@gmail.com"
+            android:text="E-mail"
             android:textColor="@color/black"
             android:layout_below="@id/userName_ID"
             android:layout_marginTop="10dp"
@@ -147,7 +147,7 @@ android:layout_below="@id/editProfileBtn"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="9"
+                        android:text="0"
                         android:id="@+id/numOfCompletedCourses_ID"
                         android:textSize="18sp"
                         android:textStyle="bold"
@@ -193,7 +193,7 @@ android:layout_marginTop="5dp"
                         android:id="@+id/numOfEnrolledCourses_ID"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="3"
+                        android:text="0"
                         android:layout_marginTop="7dp"
                         android:textColor="@android:color/black"
                         android:textSize="18sp"
@@ -217,299 +217,35 @@ android:layout_marginTop="5dp"
 
 
             </GridLayout>
-
-
+            <!-- My Courses header -->
             <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-
-        android:id="@+id/myCourseTitle"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="My Courses"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-
-            android:textStyle="bold" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="See All"
-            android:id="@+id/seeAllMyCourses"
-            android:textStyle="bold"
-            android:layout_alignParentEnd="true"
-            android:layout_centerInParent="true"
-            android:textColor="@color/dot_green"
-
-            />
-
-
-    </RelativeLayout>
-
-
-
-    <HorizontalScrollView
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="horizontal"
-        android:layout_below="@id/myCourseTitle"
-        >
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:baselineAligned="false"
-            android:orientation="horizontal"
-android:id="@+id/myCoursesScrollView"
-            >
-
-
-            <LinearLayout
-                android:layout_width="0dp"
+                android:id="@+id/myCourseTitle"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-
-                android:background="@drawable/cards_outline_grey"
-                android:clickable="true"
-                android:focusable="true"
-
-                android:orientation="vertical"
-                android:padding="8dp">
-
-                <ImageView
-
+                android:orientation="horizontal">
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="cousre icon"
-                    android:src="@drawable/popular_course4"
-
-                    />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:text="The Barriers Of Future Generation"
+                    android:text="My Courses"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
                     android:textColor="@color/black"
-                    android:id="@+id/courseTextView1"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:text="Dr. Marwan Mohammed"
-                    android:id="@+id/instructorNameID_1"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
+                    android:layout_marginBottom="10dp"/>
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:background="@drawable/semi_round_green_button"
-                    android:text="@string/start"
-                    android:id="@+id/startcourseBtn1"
-                    android:textColor="@color/white" />
+            </RelativeLayout>
 
-            </LinearLayout>
-
-            <LinearLayout
-
-                android:layout_width="0dp"
+            <!-- ← replaced HorizontalScrollView + its LinearLayout … -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/myCoursesContainer"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginBottom="16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:orientation="horizontal"
+                />
 
-                android:layout_weight="1"
-                android:background="@drawable/cards_outline_grey"
-                android:clickable="true"
-                android:focusable="true"
-                android:orientation="vertical"
-                android:padding="8dp">
-
-                <ImageView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="cousre icon"
-                    android:src="@drawable/popular_course_photo3"
-
-                    />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:text="Let's Migrate to Allah"
-                    android:id="@+id/courseTextView2"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:id="@+id/instructorNameID_2"
-                    android:text="Dr. Marwan Mohammed"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:background="@drawable/semi_round_green_button"
-                    android:text="@string/start"
-                    android:id="@+id/startcourseBtn2"
-                    android:textColor="@color/white" />
-
-            </LinearLayout>
 
         </LinearLayout>
-
-    </HorizontalScrollView>
-
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-
-                android:id="@+id/myCompletedCourses"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Completed Courses"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="See All"
-                    android:id="@+id/seeAllCompletedCourses"
-                    android:textStyle="bold"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerInParent="true"
-                    android:textColor="@color/dot_green"
-
-                    />
-
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="10dp"
-                android:background="@drawable/cards_outline_grey"
-                >
-
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/islamic_pictures"
-                    android:src="@drawable/my_learning_photo_course"
-                    android:id="@+id/myLearningPhoto2"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="Let's Migrate to Allah"
-                    android:id="@+id/myCompletedTextView1"
-                    android:layout_toEndOf="@id/myLearningPhoto2"
-                    android:textColor="@color/black"
-                    android:layout_marginBottom="10dp"
-                    android:textStyle="bold" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/myCompletedContinueBtn1"
-                    android:layout_width="wrap_content"
-
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/semi_round_green_button"
-                    android:text="@string/Continue"
-                    android:paddingEnd="30dp"
-                    android:paddingStart="30dp"
-                    android:layout_below="@id/myCompletedTextView1"
-                    android:layout_centerInParent="true"
-                    android:layout_alignParentEnd="true"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="10dp"
-                android:background="@drawable/cards_outline_grey"
-                >
-
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/islamic_pictures"
-                    android:src="@drawable/my_learning_photo_course2"
-                    android:id="@+id/myLearningPhoto1"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="@string/fiqh_of_ramadan"
-                    android:id="@+id/myCompletedTextView2"
-                    android:layout_toEndOf="@id/myLearningPhoto1"
-                    android:textColor="@color/black"
-                    android:layout_marginBottom="10dp"
-                    android:textStyle="bold" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/myCompletedContinueBtn2"
-                    android:layout_width="wrap_content"
-
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/semi_round_green_button"
-                    android:text="@string/Continue"
-                    android:paddingEnd="30dp"
-                    android:paddingStart="30dp"
-                    android:layout_below="@id/myCompletedTextView2"
-                    android:layout_centerInParent="true"
-                    android:layout_alignParentEnd="true"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white" />
-
-            </RelativeLayout>
-
-
-</LinearLayout>
     </ScrollView>
-
 </RelativeLayout>

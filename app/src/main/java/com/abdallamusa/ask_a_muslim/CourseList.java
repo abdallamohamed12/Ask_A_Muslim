@@ -2,7 +2,7 @@ package com.abdallamusa.ask_a_muslim;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,14 +19,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.DataSource;
-import com.bumptech.glide.load.engine.GlideException;
-import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.target.Target;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -42,11 +40,17 @@ public class CourseList extends AppCompatActivity {
     private CourseAdapter adapter;
     private List<Course> courses = new ArrayList<>();
     private CourseApiService apiService;
+    private final String studentId = SessionManager.get().getUserId();
+
+    private static EnrollmentApi enrollmentApi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_list);
+
+                     // if you have description/lessons etc, pass them too
+
 
         // Initialize views
         TextView screenTitle = findViewById(R.id.screenTitle);
@@ -60,6 +64,8 @@ public class CourseList extends AppCompatActivity {
                 .build();
 
         apiService = retrofit.create(CourseApiService.class);
+
+        enrollmentApi = retrofit.create(EnrollmentApi.class);
 
         // Get category from intent
         String levelName = getIntent().getStringExtra("category");
@@ -132,10 +138,12 @@ public class CourseList extends AppCompatActivity {
 
         @SerializedName("category")
         private String category;
-
-        public Course(String id ,String title,String category,String level, String instructor) {
+        @SerializedName("thumbnailUrl")
+        private String thumbnailUrl;
+        public Course(String id ,String title,String thumbnailUrl,String category,String level, String instructor) {
             this.id = id ;
             this.title = title;
+            this.thumbnailUrl=thumbnailUrl;
             this.instructor = instructor;
 
             this.level = level;
@@ -155,11 +163,15 @@ public class CourseList extends AppCompatActivity {
 
         public String getCategory() { return category; }
 
+        public String getThumbnailUrl() {
+            return thumbnailUrl;
+        }
     }
 
     // Custom Adapter
-    private static class CourseAdapter extends ArrayAdapter<Course> {
+    // inside CourseList…
 
+    private class CourseAdapter extends ArrayAdapter<Course> {
         private final List<Course> courses;
 
         public CourseAdapter(Context context, List<Course> courses) {
@@ -177,37 +189,62 @@ public class CourseList extends AppCompatActivity {
 
             Course course = courses.get(position);
 
-            TextView title = convertView.findViewById(R.id.courseTitle);
-            TextView instructor = convertView.findViewById(R.id.courseInstructor);
-            AppCompatButton actionBtn = convertView.findViewById(R.id.courseActionButton);
-
-            // 5. Handle clicks
-
-
-          //  ImageView thumbnail = convertView.findViewById(R.id.courseThumbnail);
+            TextView title       = convertView.findViewById(R.id.courseTitle);
+            TextView instructor  = convertView.findViewById(R.id.courseInstructor);
+            AppCompatButton btn   = convertView.findViewById(R.id.courseActionButton);
+            ImageView thumb      = convertView.findViewById(R.id.thumbnailUrl_ID);
 
             title.setText(course.getTitle());
-           instructor.setText(course.getInstructor());
+            instructor.setText(course.getInstructor());
+            Glide.with(getContext())
+                    .load(course.getThumbnailUrl())
+                    .into(thumb);
 
-            actionBtn.setOnClickListener(btn -> {
-                // e.g. start the course, open detail, show a toast...
-                Intent i = new Intent(getContext(), CoursesDetails.class);
-                // pass whatever you need into extras:
-                i.putExtra("course_id",        course.getId());
-                i.putExtra("course_title",     course.getTitle());
-                i.putExtra("course_instructor",course.getInstructor());
-                i.putExtra("course_level",course.getLevel());
-                i.putExtra("course_category",course.getCategory());
+            btn.setText("Enroll Now");
+            btn.setEnabled(true);
+            btn.setOnClickListener(v -> {
+                // 1) call the Enrollment API
+                enrollmentApi.enrollCourse(new EnrollmentRequest(studentId, course.getId()))
+                        .enqueue(new Callback<Void>() {
+                            @Override public void onResponse(@NonNull Call<Void> call,
+                                                             @NonNull Response<Void> resp) {
+                                // you might check resp.isSuccessful() here…
+                            }
+                            @Override public void onFailure(@NonNull Call<Void> call,
+                                                            @NonNull Throwable t) {
+                                Toast.makeText(CourseList.this,
+                                        "Enroll failed: " + t.getMessage(),
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        });
 
+                // 2) save locally
+                SharedPreferences prefs = getContext()
+                        .getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
+                Set<String> set = new HashSet<>(prefs.getStringSet("enrolled_ids", new HashSet<>()));
+                set.add(course.getId());
+                prefs.edit().putStringSet("enrolled_ids", set).apply();
 
-                ;
+                // 3) flip button
+                btn.setText("Enrolled");
+                btn.setEnabled(false);
 
-
-                // if you have description/lessons etc, pass them too
-                getContext().startActivity(i);
+                // 4) launch details
+                Intent i = new Intent(CourseList.this, CoursesDetails.class);
+                i.putExtra("course_id",         course.getId());
+                i.putExtra("course_title",      course.getTitle());
+                i.putExtra("course_instructor", course.getInstructor());
+                i.putExtra("course_level",      course.getLevel());
+                i.putExtra("course_category",   course.getCategory());
+                i.putExtra("course_thumbnail",  course.getThumbnailUrl());
+                CourseList.this.startActivity(i);
             });
 
-return convertView;
-           }
+            return convertView;
+        }
     }
+
+
+
+
 }

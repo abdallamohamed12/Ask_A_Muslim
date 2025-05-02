@@ -104,6 +104,7 @@ public class login extends AppCompatActivity {
                                             .putString("auth_token", token)
                                             .putString("user_id", userId)
                                             .apply();
+                                    SessionManager.get().saveSession(userId, token);
                                 }
 
                                 startActivity(new Intent(login.this, Courses.class));

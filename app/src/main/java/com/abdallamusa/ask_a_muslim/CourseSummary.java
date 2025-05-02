@@ -17,5 +17,6 @@ public class CourseSummary {
     @SerializedName("thumbnailUrl")
     public String thumbnailUrl;
 
+    public CourseSummary() {}
     // we’ll ignore lessons+others here…
 }

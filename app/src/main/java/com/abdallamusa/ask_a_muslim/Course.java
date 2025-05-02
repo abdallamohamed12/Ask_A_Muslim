@@ -11,11 +11,14 @@ public class Course {
     public final String category;
 
 
+    public final String thumbnailUrl;
 
 
-    public Course(String id ,String title,String category,String level, String instructor) {
+
+
+    public Course(String id ,String title,String thumbnailUrl,String category,String level, String instructor) {
         this.id = id ;
-
+this.thumbnailUrl = thumbnailUrl;
 
         this.title = title;
         this.instructor = instructor;
@@ -36,6 +39,9 @@ public class Course {
         return instructor;
     }
 
+    public String getThumbnailUrl() {
+        return thumbnailUrl;
+    }
 
     public String getLevel() {
         return level;
@@ -44,4 +50,7 @@ public class Course {
     public String getCategory() {
         return category;
     }
+
+
+
 }

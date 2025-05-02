@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:paddingTop="16dp"
     android:background="@android:color/white"
-    android:layout_marginTop="30dp">
+    android:layout_marginTop="30dp"
+    tools:context=".CourseListProfile">
 
     <!-- Back arrow + dynamic title -->
     <ImageButton
@@ -20,7 +21,7 @@
         android:layout_alignParentTop="true"/>
 
     <TextView
-        android:id="@+id/screenTitle"
+        android:id="@+id/screenTitleProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Beginners Courses"
@@ -35,7 +36,7 @@
 
     <!-- This ListView will inflate your row-template for each course -->
     <ListView
-        android:id="@+id/coursesListView"
+        android:id="@+id/coursesListViewProfile"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/backButton"

@@ -1,6 +1,7 @@
 package com.abdallamusa.ask_a_muslim;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,6 +12,11 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.nio.charset.StandardCharsets;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -79,6 +85,28 @@ public class signUp extends AppCompatActivity {
                                        @NonNull Response<RegisterResponse> resp) {
                     if (resp.isSuccessful() && resp.body() != null ) {
 
+                        String token = resp.body().getToken();
+                        // Parse out the JWT payload to extract the "sub" (user id)
+                        String userId = "";
+                        String[] parts = token.split("\\.");
+                        if (parts.length == 3) {
+                            try {
+                                byte[] decoded = android.util.Base64.decode(parts[1], android.util.Base64.URL_SAFE);
+                                String payload = new String(decoded, StandardCharsets.UTF_8);
+                                JSONObject obj = new JSONObject(payload);
+                                userId = obj.getString("sub");
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+
+                        // Save token + new_user_id to SharedPreferences
+                        SharedPreferences prefs = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
+                        prefs.edit()
+                                .putString("auth_token", token)
+                                .putString("new_user_id", userId)
+                                .apply();
+                        SessionManager.get().saveSession(userId, token);
                          msg_signUpID = resp.body().getMessage();
                         Toast.makeText(signUp.this,
                                 "Registration successful!\n"+msg_signUpID,

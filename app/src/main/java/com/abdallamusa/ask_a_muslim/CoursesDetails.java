@@ -1,7 +1,8 @@
 
 package com.abdallamusa.ask_a_muslim;
-;
+
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -30,7 +31,7 @@ import retrofit2.http.Path;
 
 public class CoursesDetails extends AppCompatActivity {
     TextView tabOverview, tabSyllabus, courseTitleTv,
-            categoryLabel , numOfStudents , instructorName , courseLevel;
+            categoryLabel , numOfStudents , instructorName , courseLevel , numOfProgressBar;
     FrameLayout contentContainer;
     ProgressBar progressBar;
     AppCompatButton continueLearningBtn;
@@ -57,10 +58,11 @@ ImageView headerImage ;
         tabOverview          = findViewById(R.id.tabOverview);
         tabSyllabus          = findViewById(R.id.tabSyllabus);
         contentContainer     = findViewById(R.id.content_container);
-        progressBar          = findViewById(R.id.courseProgressBar);
+
         continueLearningBtn  = findViewById(R.id.btnContinueLearning);
         numOfStudents = findViewById(R.id.numOfStudents_ID);
         instructorName = findViewById(R.id.instructorName);
+      //  numOfProgressBar = findViewById(R.id.numberOfProgressBarID);
 
 courseLevel = findViewById(R.id.courseLevel_ID);
 
@@ -78,6 +80,13 @@ courseLevel = findViewById(R.id.courseLevel_ID);
        courseLevel.setText(level);
         instructorName.setText(instructor);
         categoryLabel.setText(category);
+
+
+        SharedPreferences prefs = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
+        int pct = prefs.getInt("latest_progress_pct", 0);
+
+// mark course as completed locally
+
 
 
         // 4) init Retrofit
@@ -134,6 +143,11 @@ courseLevel = findViewById(R.id.courseLevel_ID);
             if (course != null && !course.lessons.isEmpty()) {
                 Intent i = new Intent(this, LessonVideo.class);
                 i.putExtra("lesson_id", course.lessons.get(0).id);
+                i.putExtra("course_id", courseId);
+                i.putExtra("course_numOfLessons", course.numberOfLessons);
+
+
+
                 startActivity(i);
             }
         });
