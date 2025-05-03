@@ -47,10 +47,20 @@ public class CourseCardAdapter
         CourseSummary cs = data.get(pos);
         h.title .setText(cs.title);
         h.instr .setText(cs.instructor);
-        Glide.with(ctx)
-                .load(cs.thumbnailUrl)
-                .placeholder(R.drawable.placholder_image)
-                .into(h.thumb);
+           // 1) Pull the raw “thumbnailUrl” (which is really just a filename)
+    String filename = cs.thumbnailUrl;  // e.g. "a1.jpg"
+
+    // 2) Build the full URL
+    String fullUrl = filename.startsWith("http")
+                   ? filename
+                   : "https://ask-a-muslim.runasp.net/uploads/course-thumbnails/" + filename;
+
+    // 3) Load with Glide
+    Glide.with(ctx)
+         .load(fullUrl)
+         .placeholder(R.drawable.placholder_image)  // optional fallback
+         .into(h.thumb);
+
 
         h.continueBtn.setOnClickListener(v -> {
             // forward to Activity
